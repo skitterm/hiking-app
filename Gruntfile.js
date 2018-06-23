@@ -8,6 +8,14 @@ module.exports = function(grunt) {
                     keepalive: true
                 }
             }            
+        },
+        watch: {
+            app: {
+                files: ['src/**'],
+                options: {
+                    livereload: true
+                }                
+            }
         }
     });
 
