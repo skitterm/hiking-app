@@ -6,26 +6,10 @@
     </div>    
 </div>
 <div id="main-content">
-    <div id="hikes-table">
-        <table>
-            <thead>
-                <tr>
-                    <td class="table-name">Name</td>
-                    <td class="table-area">Area</td>
-                    <td class="table-distance">Distance</td>
-                    <td class="table-elevation">Elev. Gain</td>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each hikes}}
-                    <tr>
-                        <td>{{name}}</td>
-                        <td>{{area}}</td>
-                        <td>{{distance}} mi</td>
-                        <td>{{elevationGain}} ft</td>
-                    </tr>
-                {{/each}}
-            </tbody>
-        </table>
+    <div id="main-search">
+        <input type="search" placeholder="Type a hike here...">
     </div>
+    <div id="hikes-table">
+        {{{mainTable}}}    
+    </div>    
 </div>

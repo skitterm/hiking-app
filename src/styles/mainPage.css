@@ -35,7 +35,15 @@
 #main-content {
     width: 900px;
     max-width: 80%;
+    padding: 20px 0;
     margin: auto;
+}
+
+#main-search input {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
 }
 
 #main-content table {
@@ -70,4 +78,8 @@
 
 #main-content table td {
     padding: 10px 20px;
+}
+
+#main-content table .empty-row td {
+    width: 100%;
 }
