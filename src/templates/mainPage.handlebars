@@ -1,0 +1,31 @@
+<div id="main-hero">
+    <img id="main-hero-image" src="img/trail.jpg"/>
+    <div id="main-hero-text">
+        <h1 id="main-title">Hikes Near You</h1>
+        <h3 id="main-subtitle">A collection of the best hikes in your neck of the woods.</h3>
+    </div>    
+</div>
+<div id="main-content">
+    <div id="hikes-table">
+        <table>
+            <thead>
+                <tr>
+                    <td class="table-name">Name</td>
+                    <td class="table-area">Area</td>
+                    <td class="table-distance">Distance</td>
+                    <td class="table-elevation">Elev. Gain</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each hikes}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{area}}</td>
+                        <td>{{distance}} mi</td>
+                        <td>{{elevationGain}} ft</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -7,7 +7,13 @@ function(
 ) {            
     router.init(displayView);
 
-    function displayView() {
-
+    function displayView() {       
+        var hikes = [
+            
+        ];
+        
+        $('#main').html(Handlebars.templates.mainPage({
+            hikes: hikes
+        }));
     }
 });
