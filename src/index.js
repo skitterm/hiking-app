@@ -4,6 +4,10 @@ require([
 ], 
 function(
     router
-) {
-    router.init();
+) {            
+    router.init(displayView);
+
+    function displayView() {
+
+    }
 });

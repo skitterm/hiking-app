@@ -1,5 +1,8 @@
 define([], function() {
-    function init() {                
+    var routeCallback = null;
+
+    function init(callback) {
+        routeCallback = callback;                
         window.onhashchange = function() {
             route();
         };
@@ -9,6 +12,7 @@ define([], function() {
 
     function route() {
         console.log('new hash: ', window.location.hash);
+        routeCallback();
     }
 
     return {        
