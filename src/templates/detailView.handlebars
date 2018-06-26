@@ -1,0 +1,23 @@
+<div id="detail-container">
+    <div id="detail-title">
+        <h1>{{hike.title}}</h1>
+    </div>
+    <div id="detail-carousel">
+        <div id="carousel-container">
+            <button class="carousel-button" id="carousel-prev">Previous</button>
+            {{#each hike.images}}
+                <div class="detail-carousel-item">
+                    <img src="{{url}}">
+                </div>            
+            {{/each}}        
+            <button class="carousel-button" id="carousel-next">Next</button>
+        </div>        
+    </div>
+    <div id="detail-stats"></div>
+    <div id="detail-map"></div>
+    <div id="detail-description">
+        {{#each hike.description.paragraphs}}
+            <p>{{text}}</p>
+        {{/each}}        
+    </div>
+</div>

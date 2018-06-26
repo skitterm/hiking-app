@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Hiking App</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.24/esri/css/esri.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/mainView.css">
+    <link rel="stylesheet" href="styles/detailView.css">
+</head>
+<body>    
+    <div id="main"></div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDQvtO4dYGk2Y8MXVA8nBKpYo64kUxcaoA",
+            authDomain: "hiking-app-ee024.firebaseapp.com",
+            databaseURL: "https://hiking-app-ee024.firebaseio.com",
+            projectId: "hiking-app-ee024",
+            storageBucket: "hiking-app-ee024.appspot.com",
+            messagingSenderId: "721261403399"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="config.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.min.js"></script>
+    <script src="templates.js"></script>
+    <script src="https://js.arcgis.com/3.24/"></script>
+    <script src="index.js"></script>    
+    <script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>

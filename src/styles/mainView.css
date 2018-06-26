@@ -1,0 +1,73 @@
+#main-hero {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+#main-hero-image {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -231px;
+    z-index: 0;
+}
+
+#main-hero-text {
+    text-align: center;
+    position: absolute;
+    color: white;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 80%;
+}
+
+#main-hero-text > * {
+    font-weight: normal;
+}
+
+#main-title {
+    font-size: 60px;
+}
+
+#main-content {
+    width: 900px;
+    max-width: 80%;
+    padding: 20px 0;
+    margin: auto;
+}
+
+#main-search input {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#main-content table {
+    width: 100%;
+    border-spacing: unset;
+}
+
+#main-content table thead {
+    font-weight: bold;
+    border-bottom: 2px solid #AAA;
+}
+
+#main-content table tbody tr:nth-child(2n + 1) {
+    background: #CCC;
+}
+
+#main-content table tbody tr:nth-child(2n) {
+    background: #EEE;
+}
+
+#main-content table td {
+    padding: 10px 20px;
+}
+
+#main-content table .empty-row td {
+    width: 100%;
+}
