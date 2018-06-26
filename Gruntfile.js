@@ -11,10 +11,16 @@ module.exports = function(grunt) {
         },
         watch: {
             app: {
-                files: ['src/**'],
+                files: ['src/**', '!src/templates.js'],
                 options: {
                     livereload: true
-                }                
+                },
+                tasks: ['exec']                
+            }
+        },
+        exec: {
+            handlebars: {
+                command: 'handlebars src/templates/ -f src/templates.js'
             }
         }
     });

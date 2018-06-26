@@ -20,11 +20,11 @@ templates['mainTable'] = template({"1":function(container,depth0,helpers,partial
     + alias4(((helper = (helper = helpers.elevationGain || (depth0 != null ? depth0.elevationGain : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"elevationGain","hash":{},"data":data}) : helper)))
     + " ft</td>\r\n            </tr>\r\n";
 },"3":function(container,depth0,helpers,partials,data) {
-    return "            <tr class=\"empty-row\">\r\n                <td>Sorry, no hikes found.</td>\r\n            </tr>\r\n";
+    return "            <tr class=\"empty-row\">\r\n                <td colspan=\"20\">Sorry, no hikes found.</td>\r\n            </tr>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
 
-  return "<table>\r\n    <thead>\r\n        <tr>\r\n            <td class=\"table-name\">Name</td>\r\n            <td class=\"table-area\">Area</td>\r\n            <td class=\"table-distance\">Distance</td>\r\n            <td class=\"table-elevation\">Elev. Gain</td>\r\n        </tr>\r\n    </thead>\r\n    <tbody>        \r\n"
+  return "<table>\r\n    <colgroup>\r\n        <col span=\"8\">\r\n        <col span=\"6\">\r\n        <col span=\"3\">\r\n        <col span=\"3\">\r\n    </colgroup>\r\n    <thead>\r\n        <tr>\r\n            <td class=\"table-name\">Name</td>\r\n            <td class=\"table-area\">Area</td>\r\n            <td class=\"table-distance\">Distance</td>\r\n            <td class=\"table-elevation\">Elev. Gain</td>\r\n        </tr>\r\n    </thead>\r\n    <tbody>        \r\n"
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.hikes : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers.unless.call(alias1,((stack1 = (depth0 != null ? depth0.hikes : depth0)) != null ? stack1.length : stack1),{"name":"unless","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </tbody>\r\n</table>";

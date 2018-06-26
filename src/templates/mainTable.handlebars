@@ -1,4 +1,10 @@
 <table>
+    <colgroup>
+        <col span="8">
+        <col span="6">
+        <col span="3">
+        <col span="3">
+    </colgroup>
     <thead>
         <tr>
             <td class="table-name">Name</td>
@@ -18,7 +24,7 @@
         {{/each}}
         {{#unless hikes.length}}
             <tr class="empty-row">
-                <td>Sorry, no hikes found.</td>
+                <td colspan="20">Sorry, no hikes found.</td>
             </tr>
         {{/unless}}
     </tbody>

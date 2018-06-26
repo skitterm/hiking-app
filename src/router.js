@@ -1,8 +1,8 @@
 define([], function() {
-    var routeCallback = null;
+    var routes = null;
 
-    function init(callback) {
-        routeCallback = callback;                
+    function init(inRoutes) {
+        routes = inRoutes;                
         window.onhashchange = function() {
             route();
         };
@@ -11,8 +11,22 @@ define([], function() {
     }
 
     function route() {
-        console.log('new hash: ', window.location.hash);
-        routeCallback();
+        $('#main').empty();
+
+        var hashValue = window.location.hash.substring(1);
+
+        switch(hashValue) {
+            case '':
+            case '/':
+                routes.main.callback();
+                break;
+            case '/hike':
+                routes.detail.callback();
+                break;
+            default: 
+                routes.main.callback();
+                break;
+        }                
     }
 
     return {        
