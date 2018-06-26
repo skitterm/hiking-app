@@ -1,18 +1,20 @@
 require([
     'app/router',
     'app/views/MainView',
+    'app/views/DetailView',
     'dojo/domReady!'
 ], 
 function(
     router,
-    MainView    
+    MainView,
+    DetailView    
 ) {                
     router.init({
         main: {
             callback: MainView.init
         },
         detail: {
-            callback: function() { alert('hi'); }
+            callback: DetailView.init
         }
     });        
 });

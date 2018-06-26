@@ -12,22 +12,25 @@ define([], function() {
 
     function route() {
         $('#main').empty();
-
+      
         var hashValue = window.location.hash.substring(1);
+        var pathParts = hashValue.split('/');
+        var pathValue = pathParts[1] || '';
+        var dynamicID = '';
 
-        switch(hashValue) {
+        switch(pathValue) {
             case '':
-            case '/':
                 routes.main.callback();
                 break;
-            case '/hike':
-                routes.detail.callback();
+            case 'hike':
+                dynamicID = pathParts[2] || '';
+                routes.detail.callback(dynamicID);
                 break;
             default: 
                 routes.main.callback();
                 break;
         }                
-    }
+    }    
 
     return {        
         init: init 
