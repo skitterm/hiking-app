@@ -26,6 +26,10 @@ define([], function() {
                 dynamicID = pathParts[2] || '';
                 routes.detail.callback(dynamicID);
                 break;
+            case 'edit':
+                dynamicID = pathParts[3] || '';
+                routes.detailEdit.callback(dynamicID); 
+                break;
             default: 
                 routes.main.callback();
                 break;

@@ -1,0 +1,22 @@
+<div id="detail-edit">
+    <h1>Editing Hike: {{hike.title}}</h1>
+    <div id="detail-edit-main">
+        <div id="detail-edit-title-container" class="detail-edit-section">
+            <h3>Title</h3>
+            <input type="text" value="{{hike.title}}" size="72" />
+        </div>
+        <div id="detail-edit-description-container" class="detail-edit-section">
+            <h3>Description</h3>
+            {{#each hike.description.paragraphs}}
+                <div class="detail-edit-description-wrapper">
+                    <textarea cols="100" rows="6">{{text}}</textarea>
+                </div>                
+            {{/each}}
+            <button id="detail-edit-add-paragraph">Add Paragraph</button>
+        </div>
+    </div>
+    <div id="detail-edit-buttons">
+        <button id="detail-edit-save">Save</button>
+        <button id="detail-edit-cancel">Cancel</button>
+    </div>
+</div>

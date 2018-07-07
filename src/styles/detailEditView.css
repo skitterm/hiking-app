@@ -1,0 +1,26 @@
+#detail-edit {
+    max-width: 800px;
+    margin: auto;
+}
+
+.detail-edit-section {
+    margin-bottom: 35px;
+}
+
+#detail-edit-title-container input {
+    font-size: 20px;    
+}
+
+.detail-edit-description-wrapper + .detail-edit-description-wrapper {
+    margin-top: 20px;
+}
+
+.detail-edit-description-wrapper textarea {
+    padding: 7px 15px;
+    font-family: georgia;
+    font-size: 14px;
+}
+
+#detail-edit-buttons {
+    margin-bottom: 50px;
+}

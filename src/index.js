@@ -2,12 +2,14 @@ require([
     'app/router',
     'app/views/MainView',
     'app/views/DetailView',
+    'app/views/DetailEditView',
     'dojo/domReady!'
 ], 
 function(
     router,
     MainView,
-    DetailView    
+    DetailView,
+    DetailEditView
 ) {      
     $('#app-header').html(Handlebars.templates.header());
     
@@ -17,6 +19,9 @@ function(
         },
         detail: {
             callback: DetailView.init
+        },
+        detailEdit: {
+            callback: DetailEditView.init
         }
     });        
 });
