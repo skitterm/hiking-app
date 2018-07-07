@@ -17,7 +17,7 @@ define([], function() {
     }
 
     function display(hikes) {
-        $('#main').html(Handlebars.templates.mainView({
+        $('#app-main').html(Handlebars.templates.mainView({
             mainTable: Handlebars.templates.mainTable({
                 hikes: hikes
             })            

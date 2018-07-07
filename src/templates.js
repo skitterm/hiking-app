@@ -23,6 +23,9 @@ templates['detailView'] = template({"1":function(container,depth0,helpers,partia
     + ((stack1 = helpers.each.call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.description : stack1)) != null ? stack1.paragraphs : stack1),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\r\n</div>";
 },"useData":true});
+templates['header'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<h3>Hikes Near You</h3>\r\n<nav id=\"header-links\">\r\n    <ul id=\"header-links-list\">\r\n        <li>\r\n            <a href=\"#/\">Home</a>\r\n        </li>\r\n    </ul>    \r\n</nav>";
+},"useData":true});
 templates['mainTable'] = template({"1":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 

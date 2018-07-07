@@ -8,7 +8,9 @@ function(
     router,
     MainView,
     DetailView    
-) {                
+) {      
+    $('#app-header').html(Handlebars.templates.header());
+    
     router.init({
         main: {
             callback: MainView.init

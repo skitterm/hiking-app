@@ -11,7 +11,7 @@ define([], function() {
     }
 
     function route() {
-        $('#main').empty();
+        $('#app-main').empty();
       
         var hashValue = window.location.hash.substring(1);
         var pathParts = hashValue.split('/');

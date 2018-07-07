@@ -23,7 +23,7 @@ define([
     }
 
     function display(hike) {
-        $('#main').html(Handlebars.templates.detailView({
+        $('#app-main').html(Handlebars.templates.detailView({
             hike: hike          
         }));
 
