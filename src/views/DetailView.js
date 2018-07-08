@@ -68,6 +68,7 @@ define([
         map.disablePinchZoom();
 
         var point = new Point(coordinates.x, coordinates.y);
+
         var symbol = new SimpleMarkerSymbol(
             SimpleMarkerSymbol.STYLE_CIRCLE, 
             25, 
@@ -75,8 +76,10 @@ define([
             new Color('#F00')
         );
         var graphic = new Graphic(point, symbol);
+        
+        map.graphics.clear();
         map.graphics.add(graphic);
-    }
+    }   
 
     function setCarousel(images) {
         $('.detail-carousel-item').removeClass('selected');

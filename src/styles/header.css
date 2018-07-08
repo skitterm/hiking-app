@@ -9,6 +9,12 @@
 
 #header-links-list {
     list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+#header-links-list li {
+    margin-left: 20px;
 }
 
 #header-link-sign-out span {

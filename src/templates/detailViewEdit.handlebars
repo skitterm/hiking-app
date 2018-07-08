@@ -5,6 +5,23 @@
             <h3>Title</h3>
             <input type="text" value="{{hike.title}}" size="72" />
         </div>
+        <div id="detail-edit-area-container" class="detail-edit-section">
+            <h3>Area</h3>
+            <input type="text" value="{{hike.area}}" size="40" />
+        </div>
+        <div id="detail-edit-distance-container" class="detail-edit-section">
+            <h3>Distance</h3>
+            <input type="text" value="{{hike.distance}}" size="20" />
+        </div>
+        <div id="detail-edit-elevation-container" class="detail-edit-section">
+            <h3>Elevation</h3>
+            <input type="text" value="{{hike.elevationGain}}" size="20" />
+        </div>
+        <div id="detail-edit-map-container" class="detail-edit-section">
+            <h3>Map</h3>
+            <h5>Click on the map to change the location.</h5>
+            <div id="detail-edit-map"></div>
+        </div>
         <div id="detail-edit-description-container" class="detail-edit-section">
             <h3>Description</h3>
             {{#each hike.description.paragraphs}}

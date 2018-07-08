@@ -38,7 +38,13 @@ templates['detailViewEdit'] = template({"1":function(container,depth0,helpers,pa
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.title : stack1), depth0))
     + "</h1>\r\n    <div id=\"detail-edit-main\">\r\n        <div id=\"detail-edit-title-container\" class=\"detail-edit-section\">\r\n            <h3>Title</h3>\r\n            <input type=\"text\" value=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.title : stack1), depth0))
-    + "\" size=\"72\" />\r\n        </div>\r\n        <div id=\"detail-edit-description-container\" class=\"detail-edit-section\">\r\n            <h3>Description</h3>\r\n"
+    + "\" size=\"72\" />\r\n        </div>\r\n        <div id=\"detail-edit-area-container\" class=\"detail-edit-section\">\r\n            <h3>Area</h3>\r\n            <input type=\"text\" value=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.area : stack1), depth0))
+    + "\" size=\"40\" />\r\n        </div>\r\n        <div id=\"detail-edit-distance-container\" class=\"detail-edit-section\">\r\n            <h3>Distance</h3>\r\n            <input type=\"text\" value=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.distance : stack1), depth0))
+    + "\" size=\"20\" />\r\n        </div>\r\n        <div id=\"detail-edit-elevation-container\" class=\"detail-edit-section\">\r\n            <h3>Elevation</h3>\r\n            <input type=\"text\" value=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.elevationGain : stack1), depth0))
+    + "\" size=\"20\" />\r\n        </div>\r\n        <div id=\"detail-edit-map-container\" class=\"detail-edit-section\">\r\n            <h3>Map</h3>\r\n            <h5>Click on the map to change the location.</h5>\r\n            <div id=\"detail-edit-map\"></div>\r\n        </div>\r\n        <div id=\"detail-edit-description-container\" class=\"detail-edit-section\">\r\n            <h3>Description</h3>\r\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),((stack1 = ((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.description : stack1)) != null ? stack1.paragraphs : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "            <button id=\"detail-edit-add-paragraph\">Add Paragraph</button>\r\n        </div>\r\n    </div>\r\n    <div id=\"detail-edit-buttons\">\r\n        <button id=\"detail-edit-save\">Save</button>\r\n        <button id=\"detail-edit-cancel\">Cancel</button>\r\n    </div>\r\n</div>";
 },"useData":true});
