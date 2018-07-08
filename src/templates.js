@@ -17,7 +17,7 @@ templates['detailView'] = template({"1":function(container,depth0,helpers,partia
 
   return "<div id=\"detail-container\">\r\n    <div id=\"detail-title\">\r\n        <h1>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.title : stack1), depth0))
-    + "</h1>\r\n        <a href=\"#/edit/hike/"
+    + "</h1>\r\n        <a id=\"detail-edit-button\" class=\"auth-only\" href=\"#/edit/hike/"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.id : stack1), depth0))
     + "\">Edit Hike</a>\r\n    </div>\r\n    <div id=\"detail-carousel\">\r\n        <div id=\"carousel-container\">\r\n            <button class=\"carousel-button\" id=\"carousel-prev\">Previous</button>\r\n"
     + ((stack1 = helpers.each.call(alias3,((stack1 = (depth0 != null ? depth0.hike : depth0)) != null ? stack1.images : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
@@ -43,7 +43,7 @@ templates['detailViewEdit'] = template({"1":function(container,depth0,helpers,pa
     + "            <button id=\"detail-edit-add-paragraph\">Add Paragraph</button>\r\n        </div>\r\n    </div>\r\n    <div id=\"detail-edit-buttons\">\r\n        <button id=\"detail-edit-save\">Save</button>\r\n        <button id=\"detail-edit-cancel\">Cancel</button>\r\n    </div>\r\n</div>";
 },"useData":true});
 templates['header'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<h3>Hikes Near You</h3>\r\n<nav id=\"header-links\">\r\n    <ul id=\"header-links-list\">\r\n        <li>\r\n            <a href=\"#/\">Home</a>\r\n        </li>\r\n    </ul>    \r\n</nav>";
+    return "<a href=\"#/\">\r\n    <h3>Hikes Near You</h3>\r\n</a>\r\n<nav id=\"header-links\">\r\n    <ul id=\"header-links-list\">\r\n        <li id=\"header-link-create-hike\" class=\"auth-only\">\r\n            <a href=\"#/edit/hike/new\">Create Hike</a>\r\n        </li>\r\n        <li id=\"header-link-sign-in\" class=\"unauth-only\">\r\n            <a href=\"#/sign-in\">Sign In</a>\r\n        </li>\r\n        <li id=\"header-link-sign-out\" class=\"auth-only\">\r\n            <span>Sign Out</span>\r\n        </li>\r\n    </ul>    \r\n</nav>";
 },"useData":true});
 templates['mainTable'] = template({"1":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
@@ -75,5 +75,8 @@ templates['mainView'] = template({"compiler":[7,">= 4.0.0"],"main":function(cont
   return "<div id=\"main-hero\">\r\n    <img id=\"main-hero-image\" src=\"img/trail.jpg\"/>\r\n    <div id=\"main-hero-text\">\r\n        <h1 id=\"main-title\">Hikes Near You</h1>\r\n        <h3 id=\"main-subtitle\">A collection of the best hikes in your neck of the woods.</h3>\r\n    </div>    \r\n</div>\r\n<div id=\"main-content\">\r\n    <div id=\"main-search\">\r\n        <input type=\"search\" placeholder=\"Type a hike here...\">\r\n    </div>\r\n    <div id=\"hikes-table\">\r\n        "
     + ((stack1 = ((helper = (helper = helpers.mainTable || (depth0 != null ? depth0.mainTable : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"mainTable","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "    \r\n    </div>    \r\n</div>";
+},"useData":true});
+templates['signIn'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div id=\"firebaseui-auth-container\"></div>";
 },"useData":true});
 })();

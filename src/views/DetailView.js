@@ -25,7 +25,10 @@ define([
             display(hike);
             setCarousel(hike.images);
             addEvents(hike);            
-        });            
+        })
+        .catch(function(error) {
+            console.log(error);
+        });;                    
     }
 
     function display(hike) {
@@ -52,6 +55,12 @@ define([
         map.on('load', function() {
             onMapLoaded(map, hike.coordinates);
         });        
+
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                $('#detail-edit-button').show();
+            }
+        });
     }
 
     function onMapLoaded(map, coordinates) {
@@ -136,7 +145,10 @@ define([
                             $('#carousel-upload-image-toggle').show();
                             $('#carousel-upload-image').hide();
                         });
-                    });                                                                                                 
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });                                                                                           
                 }
             );
         });

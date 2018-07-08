@@ -11,3 +11,7 @@ html, body {
 body {
     font-family: georgia;    
 }
+
+.auth-only {
+    display: none;
+}

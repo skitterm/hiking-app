@@ -13,6 +13,9 @@ define([], function() {
             display(hikes);
     
             addEvents(hikes);  
+        })
+        .catch(function(error) {
+            console.log(error);
         });                                        
     }
 

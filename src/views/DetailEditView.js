@@ -6,7 +6,10 @@ define([], function() {
             
             display(hike);
             addEvents(hike);
-        });        
+        })
+        .catch(function(error) {
+            console.log(error);
+        });;        
     }
 
     function display(hike) {

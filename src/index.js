@@ -3,15 +3,19 @@ require([
     'app/views/MainView',
     'app/views/DetailView',
     'app/views/DetailEditView',
+    'app/views/SignInView',
+    'app/views/Header',
     'dojo/domReady!'
 ], 
 function(
     router,
     MainView,
     DetailView,
-    DetailEditView
-) {      
-    $('#app-header').html(Handlebars.templates.header());
+    DetailEditView,
+    SignInView,
+    Header
+) {    
+    Header.init();       
     
     router.init({
         main: {
@@ -22,6 +26,22 @@ function(
         },
         detailEdit: {
             callback: DetailEditView.init
+        },
+        signIn: {
+            callback: SignInView.init
         }
-    });        
+    }, {
+        signedIn: true
+    });          
+    
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            $('.auth-only').show();
+            $('.unauth-only').hide();
+        }   
+        else {
+            $('.auth-only').hide();
+            $('.unauth-only').show();
+        }     
+    });
 });

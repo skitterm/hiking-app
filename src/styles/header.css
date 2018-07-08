@@ -10,3 +10,7 @@
 #header-links-list {
     list-style-type: none;
 }
+
+#header-link-sign-out span {
+    cursor: pointer;
+}
