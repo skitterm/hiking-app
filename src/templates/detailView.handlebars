@@ -1,6 +1,7 @@
 <div id="detail-container">
     <div id="detail-title">
         <h1>{{hike.title}}</h1>
+        <a id="detail-edit-button" class="auth-only" href="#/edit/hike/{{hike.id}}">Edit Hike</a>
     </div>
     <div id="detail-carousel">
         <div id="carousel-container">
@@ -11,6 +12,10 @@
                 </div>            
             {{/each}}        
             <button class="carousel-button" id="carousel-next">Next</button>
+        </div>     
+        <div id="carousel-upload-container">
+            <button id="carousel-upload-image-toggle">Add Image</button>
+            <input id="carousel-upload-image" type="file"/>   
         </div>        
     </div>
     <div id="detail-stats"></div>

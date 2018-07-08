@@ -1,0 +1,39 @@
+<div id="detail-edit">
+    <h1>Editing Hike: {{hike.title}}</h1>
+    <div id="detail-edit-main">
+        <div id="detail-edit-title-container" class="detail-edit-section">
+            <h3>Title</h3>
+            <input type="text" value="{{hike.title}}" size="72" />
+        </div>
+        <div id="detail-edit-area-container" class="detail-edit-section">
+            <h3>Area</h3>
+            <input type="text" value="{{hike.area}}" size="40" />
+        </div>
+        <div id="detail-edit-distance-container" class="detail-edit-section">
+            <h3>Distance</h3>
+            <input type="text" value="{{hike.distance}}" size="20" />
+        </div>
+        <div id="detail-edit-elevation-container" class="detail-edit-section">
+            <h3>Elevation</h3>
+            <input type="text" value="{{hike.elevationGain}}" size="20" />
+        </div>
+        <div id="detail-edit-map-container" class="detail-edit-section">
+            <h3>Map</h3>
+            <h5>Click on the map to change the location.</h5>
+            <div id="detail-edit-map"></div>
+        </div>
+        <div id="detail-edit-description-container" class="detail-edit-section">
+            <h3>Description</h3>
+            {{#each hike.description.paragraphs}}
+                <div class="detail-edit-description-wrapper">
+                    <textarea cols="100" rows="6">{{text}}</textarea>
+                </div>                
+            {{/each}}
+            <button id="detail-edit-add-paragraph">Add Paragraph</button>
+        </div>
+    </div>
+    <div id="detail-edit-buttons">
+        <button id="detail-edit-save">Save</button>
+        <button id="detail-edit-cancel">Cancel</button>
+    </div>
+</div>

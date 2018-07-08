@@ -45,6 +45,21 @@
     right: -60px;
 }
 
+#carousel-upload-container {
+    margin-top: 10px;
+}
+
+#carousel-upload-image-toggle {
+    display: block;
+    margin: auto;
+}
+
+#carousel-upload-image {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 #detail-map {
     margin-top: 50px;
     height: 400px;
